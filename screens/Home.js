@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, View, SafeAreaView, FlatList } from 'react-native'
 const Home = () => {
   return (
     <Text>
