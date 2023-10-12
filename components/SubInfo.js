@@ -3,10 +3,10 @@ import { SIZES, COLORS, FONTS, SHADOWS, assets} from '../constants'
 import { Image } from 'react-native'
 
 
-export const  NFTTitle = () => {
+export const  NFTTitle = ({title, subtitle, titleSize, subtitleSize }) => {
   return (
     <View style={{width:'100%', height:'50'}}>
-      <Text>SubInfo for</Text>
+      <Text style={{fontFamily: FONTS.semiBold, fontSize: titleSize, color: COLORS.primary}}>title</Text>
     </View>
   )
 }
@@ -61,11 +61,12 @@ export const  SubInfo = () => {
             width:'100%',
             paddingHorizontal:SIZES.font,
             marginTop:SIZES.extraLarge,
-            borderWidth:1,
             flexDirection:'row',
             justifyContent:'space-between',
             }}>
-        <Text>SubInfo for</Text>
+            <People />
+            <EndDate />
+            <NFTTitle />
         </View>
     )
 }
