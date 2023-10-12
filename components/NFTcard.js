@@ -2,7 +2,7 @@ import { View, Text, Image} from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { COLORS, SHADOWS, SIZES, assets } from '../constants'
 import { CircledButton, RectButton } from './Button'
-import { SubInfo, EthPrice, NFTTitle, People } from './SubInfo'
+import { SubInfo, EthPrice, NFTTitle, People, EndDate } from './SubInfo'
 
 
 const NFTcard = ({item}) => {
@@ -29,6 +29,7 @@ const NFTcard = ({item}) => {
         </View>
         <SubInfo />
         <People />
+        <EndDate />
     </View>
   )
 }

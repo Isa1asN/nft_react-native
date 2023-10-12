@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import { SIZES, COLORS, FONTS, SHADOWS, assets} from '../constants'
-
+import { Image } from 'react-native'
 
 
 export const  NFTTitle = () => {
@@ -17,24 +17,41 @@ export const  EthPrice = () => {
       </View>
     )
   }
-export const  Imagecmp = () => {
+export const  Imagecmp = ({imgUrl, index}) => {
     return (
-        <View style={{width:'100%', height:'50'}}>
-        <Text>SubInfo for</Text>
-        </View>
+        <Image
+        source={imgUrl}
+        resizeMode='contain'
+        style={{ 
+          width:48,
+          height:48,
+          marginLeft: index == 0 ? 0 : -SIZES.font,
+          }}
+        />
     )
 }
 export const  People = () => {
     return (
         <View style={{flexDirection : 'row'}}>
-        <Text>SubInfo for</Text>
+            {[assets.person01, assets.person02, assets.person03, assets.person04].map((imgUrl, index) => (
+                <Imagecmp imgUrl={imgUrl} index={index} key={`People-${index}`}/>
+            ) )}
         </View>
     )
 }
 export const  EndDate = () => {
     return (
-        <View style={{width:'100%', height:'50'}}>
-        <Text>SubInfo for</Text>
+        <View style={{
+            paddingHorizontal:SIZES.font,
+            paddingVertical:SIZES.base,
+            backgroundColor:COLORS.white,
+            justifyContent:'center',
+            alignItems:'center',
+            ...SHADOWS.light,
+            elevation:1,
+            maxWidth:'50%'
+        }}>
+        <Text style={{fontFamily:FONTS.regular, fontSize: SIZES.smail, color:COLORS.primary}}>End date</Text>
         </View>
     )
 }
