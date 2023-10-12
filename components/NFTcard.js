@@ -1,7 +1,7 @@
 import { View, Text, Image} from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { COLORS, SHADOWS, SIZES, assets } from '../constants'
-import { CircledButton, RectButton } from '../components'
+import { CircledButton, RectButton } from './Button'
 
 
 
