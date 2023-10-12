@@ -30,11 +30,19 @@ const NFTcard = ({item}) => {
         <SubInfo />
         <View style={{width:'100%', padding : SIZES.font}}>
               <NFTTitle 
-                title={item.title}
-                subtitle={item.subtitle}
+                title={item.name}
+                subtitle={item.creator}
                 titleSize={SIZES.large}
                 subtitleSize={SIZES.small}
               />
+              <View style={{flexDirection : 'row', justifyContent:'space-between', alignItems:'center'}}>
+                <EthPrice price={item.price}/>
+                <RectButton 
+                  minWidth={120}
+                  fontSize={SIZES.font}
+                  handlePress={() => navigation.navigate('Details', {item})}
+                  />
+              </View>
         </View>
   
     </View>

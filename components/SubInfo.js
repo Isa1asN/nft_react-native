@@ -6,14 +6,31 @@ import { Image } from 'react-native'
 export const  NFTTitle = ({title, subtitle, titleSize, subtitleSize }) => {
   return (
     <View style={{width:'100%', height:'50'}}>
-      <Text style={{fontFamily: FONTS.semiBold, fontSize: titleSize, color: COLORS.primary}}>title</Text>
+      <Text style={{fontWeight:'500', fontSize: titleSize, color: COLORS.primary}}>{title}</Text>
+      <Text style={{ fontSize: subtitleSize, color: COLORS.primary}}>{subtitle}</Text>
     </View>
   )
 }
-export const  EthPrice = () => {
+export const  EthPrice = ({price}) => {
     return (
-      <View style={{width:'100%', height:'50'}}>
-        <Text>SubInfo for</Text>
+      <View style={{flexDirection:'row', alignItems:'center'}}>
+        <Image
+            source={assets.eth}
+            resizeMode='contain'
+            style={{ 
+              width:20,
+              height:20,
+              marginRight:2
+              }}
+        />
+        <Text style={
+            {fontSize:SIZES.small,
+            color:COLORS.primary,
+            fontWeight:'500',
+            marginRight:SIZES.base}
+        }>
+            {price}
+        </Text>
       </View>
     )
   }
@@ -51,7 +68,7 @@ export const  EndDate = () => {
             elevation:1,
             maxWidth:'50%'
         }}>
-        <Text style={{fontFamily:FONTS.regular, fontSize: SIZES.smail, color:COLORS.primary}}>End date</Text>
+        <Text style={{ fontSize: SIZES.smail, color:COLORS.primary}}>End date</Text>
         </View>
     )
 }
@@ -66,7 +83,6 @@ export const  SubInfo = () => {
             }}>
             <People />
             <EndDate />
-            <NFTTitle />
         </View>
     )
 }
