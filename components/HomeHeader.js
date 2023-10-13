@@ -31,6 +31,14 @@ const HomeHeader = () => {
 
             </View>
         </View>
+        <View style={{marginVertical:SIZES.font}}>
+          <Text style={{fontSize:SIZES.small, color:COLORS.white, fontWeight:300}}>
+              Hello, Ana 👋
+          </Text>
+          <Text style={{fontSize:SIZES.large, color:COLORS.white, fontWeight:500}}>
+              Let's find an NFT for you
+          </Text>
+        </View>
     </View>
   )
 }
