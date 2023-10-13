@@ -17,7 +17,7 @@ export const CircledButton = ({imgUrl, handlePress, ...props}) => {
         ...SHADOWS.button
     }}
     onPress={handlePress}
-    >
+    > 
         <Image source={imgUrl} resizeMode='contain' style={{width:25, height:25}} />
     </TouchableOpacity>
   )
@@ -48,4 +48,3 @@ export const RectButton = ({minWidth, handlePress, fontSize, ...props}) => {
     </TouchableOpacity>
     )
   }
-  
