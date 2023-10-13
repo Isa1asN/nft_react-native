@@ -8,8 +8,7 @@ const Home = () => {
   
     const [nftData, setnftData] = useState()
     
-
-
+    
   return (
     <SafeAreaView style={{flex : 1}}>
         <FocusedStatusBar background={COLORS.primary} />
