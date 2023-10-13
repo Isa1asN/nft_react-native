@@ -39,6 +39,12 @@ const HomeHeader = () => {
               Let's find an NFT for you
           </Text>
         </View>
+        <View style={{marginTop:SIZES.font}}>
+          <View>
+            <Image source={assets.search} resizeMode='contain' style={{width:20, height:20, marginRight:SIZES.base}}/>
+            <TextInput />
+          </View>
+        </View>
     </View>
   )
 }
